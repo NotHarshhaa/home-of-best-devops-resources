@@ -2,7 +2,7 @@
 
 Your Ultimate Collection of DevOps Learning Materials, Projects, and Tools for accelerating your DevOps journey.
 
-![Home of Best DevOps Resources](https://github.com/prodevopsguy/home-of-best-devops-resources/assets/prodevopsguy/screenshot.png)
+![Home of Best DevOps Resources](https://github.com/NotHarshhaa/home-of-best-devops-resources/assets/NotHarshhaa/screenshot.png)
 
 ## About
 
@@ -41,7 +41,7 @@ In the rapidly evolving world of DevOps, we provide a centralized collection of 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/prodevopsguy/home-of-best-devops-resources.git
+git clone https://github.com/NotHarshhaa/home-of-best-devops-resources.git
 cd home-of-best-devops-resources
 ```
 
@@ -83,7 +83,7 @@ Example resource format:
   "links": {
     "website": "https://projects.prodevopsguytech.com",
     "documentation": "https://projects.prodevopsguytech.com/docs",
-    "github": "https://github.com/prodevopsguy/projects-hub",
+    "github": "https://github.com/NotHarshhaa/projects-hub",
     "tutorial": "https://projects.prodevopsguytech.com/getting-started"
   },
   "featured": true,
@@ -108,5 +108,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-- Thanks to all [contributors](https://github.com/prodevopsguy/home-of-best-devops-resources/graphs/contributors) who have helped build this resource
+- Thanks to all [contributors](https://github.com/NotHarshhaa/home-of-best-devops-resources/graphs/contributors) who have helped build this resource
 - The entire DevOps community for continuous learning and knowledge sharing

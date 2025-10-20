@@ -55,7 +55,7 @@ const Footer = () => {
                 className="rounded-full border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all"
               >
                 <a
-                  href="https://github.com/prodevopsguy/home-of-best-devops-resources"
+                  href="https://github.com/NotHarshhaa/home-of-best-devops-resources"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
@@ -85,7 +85,7 @@ const Footer = () => {
                 className="rounded-full border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all"
               >
                 <a
-                  href="https://twitter.com/prodevopsguy"
+                  href="https://twitter.com/NotHarshhaa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
@@ -114,7 +114,7 @@ const Footer = () => {
                 className="rounded-full border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all"
               >
                 <a
-                  href="https://linkedin.com/in/prodevopsguy"
+                  href="https://linkedin.com/in/NotHarshhaa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
@@ -275,7 +275,7 @@ const Footer = () => {
           className="border-t border-border/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground"
         >
           <p>
-            © {currentYear} ProDevOpsGuy | Home of Best DevOps Resources. All
+            © {currentYear} NotHarshhaa | Home of Best DevOps Resources. All
             rights reserved.
           </p>
           <div className="flex gap-6">

@@ -331,7 +331,7 @@ export default function HomePage() {
                     className="font-bold px-8 shadow-lg hover:shadow-xl transition-all"
                   >
                     <a
-                      href="https://github.com/prodevopsguy/home-of-best-devops-resources"
+                      href="https://github.com/NotHarshhaa/home-of-best-devops-resources"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group"

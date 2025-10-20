@@ -9,7 +9,7 @@
       "links": {
         "website": "https://projects.prodevopsguytech.com",
         "documentation": "https://projects.prodevopsguytech.com/docs",
-        "github": "https://github.com/prodevopsguy/projects-hub",
+        "github": "https://github.com/NotHarshhaa/projects-hub",
         "tutorial": "https://projects.prodevopsguytech.com/getting-started"
       },
       "featured": true,
@@ -24,7 +24,7 @@
       "links": {
         "website": "https://docs.prodevopsguytech.com",
         "documentation": "https://docs.prodevopsguytech.com",
-        "github": "https://github.com/prodevopsguy/ultimate-docs",
+        "github": "https://github.com/NotHarshhaa/ultimate-docs",
         "tutorial": "https://docs.prodevopsguytech.com/getting-started"
       },
       "featured": true,
@@ -39,7 +39,7 @@
       "links": {
         "website": "https://repos.prodevopsguytech.com",
         "documentation": "https://repos.prodevopsguytech.com/docs",
-        "github": "https://github.com/prodevopsguy/repositories-central",
+        "github": "https://github.com/NotHarshhaa/repositories-central",
         "tutorial": "https://repos.prodevopsguytech.com/getting-started"
       },
       "featured": true,
@@ -54,7 +54,7 @@
       "links": {
         "website": "https://jobs.prodevopsguytech.com",
         "documentation": "https://jobs.prodevopsguytech.com/docs",
-        "github": "https://github.com/prodevopsguy/jobs-portal",
+        "github": "https://github.com/NotHarshhaa/jobs-portal",
         "tutorial": "https://jobs.prodevopsguytech.com/getting-started"
       },
       "featured": true,
@@ -69,7 +69,7 @@
       "links": {
         "website": "https://blog.prodevopsguytech.com",
         "documentation": "https://blog.prodevopsguytech.com/archive",
-        "github": "https://github.com/prodevopsguy/devops-blog",
+        "github": "https://github.com/NotHarshhaa/devops-blog",
         "tutorial": "https://blog.prodevopsguytech.com/start-here"
       },
       "featured": true,
@@ -84,7 +84,7 @@
       "links": {
         "website": "https://cloud.prodevopsguytech.com",
         "documentation": "https://cloud.prodevopsguytech.com/archive",
-        "github": "https://github.com/prodevopsguy/cloud-blog",
+        "github": "https://github.com/NotHarshhaa/cloud-blog",
         "tutorial": "https://cloud.prodevopsguytech.com/start-here"
       },
       "featured": false,
@@ -99,7 +99,7 @@
       "links": {
         "website": "https://dockertokubernetes.live",
         "documentation": "https://dockertokubernetes.live/docs",
-        "github": "https://github.com/prodevopsguy/docker-to-kubernetes",
+        "github": "https://github.com/NotHarshhaa/docker-to-kubernetes",
         "tutorial": "https://dockertokubernetes.live/getting-started"
       },
       "featured": true,
@@ -114,7 +114,7 @@
       "links": {
         "website": "https://www.devops-engineering.site",
         "documentation": "https://www.devops-engineering.site/docs",
-        "github": "https://github.com/prodevopsguy/devops-engineering-lab",
+        "github": "https://github.com/NotHarshhaa/devops-engineering-lab",
         "tutorial": "https://www.devops-engineering.site/getting-started"
       },
       "featured": true,
@@ -129,7 +129,7 @@
       "links": {
         "website": "https://www.devopsguides.site",
         "documentation": "https://www.devopsguides.site/docs",
-        "github": "https://github.com/prodevopsguy/devops-tool-guides",
+        "github": "https://github.com/NotHarshhaa/devops-tool-guides",
         "tutorial": "https://www.devopsguides.site/getting-started"
       },
       "featured": false,
@@ -144,7 +144,7 @@
       "links": {
         "website": "https://cheatsheet.prodevopsguytech.com",
         "documentation": "https://cheatsheet.prodevopsguytech.com/all",
-        "github": "https://github.com/prodevopsguy/devops-cheatsheet",
+        "github": "https://github.com/NotHarshhaa/devops-cheatsheet",
         "tutorial": "https://cheatsheet.prodevopsguytech.com/how-to-use"
       },
       "featured": false,
@@ -159,7 +159,7 @@
       "links": {
         "website": "https://devops-environment-toolkit.vercel.app",
         "documentation": "https://devops-environment-toolkit.vercel.app/docs",
-        "github": "https://github.com/prodevopsguy/devops-environment-toolkit",
+        "github": "https://github.com/NotHarshhaa/devops-environment-toolkit",
         "tutorial": "https://devops-environment-toolkit.vercel.app/getting-started"
       },
       "featured": false,
@@ -174,7 +174,7 @@
       "links": {
         "website": "https://tools.prodevopsguytech.com",
         "documentation": "https://tools.prodevopsguytech.com/docs",
-        "github": "https://github.com/prodevopsguy/devops-tools-collection",
+        "github": "https://github.com/NotHarshhaa/devops-tools-collection",
         "tutorial": "https://tools.prodevopsguytech.com/getting-started"
       },
       "featured": false,
@@ -189,7 +189,7 @@
       "links": {
         "website": "https://devops-monitoring-in-a-box.vercel.app",
         "documentation": "https://devops-monitoring-in-a-box.vercel.app/docs",
-        "github": "https://github.com/prodevopsguy/devops-monitoring-in-a-box",
+        "github": "https://github.com/NotHarshhaa/devops-monitoring-in-a-box",
         "tutorial": "https://devops-monitoring-in-a-box.vercel.app/getting-started"
       },
       "featured": false,
@@ -204,7 +204,7 @@
       "links": {
         "website": "https://awesomedevopsui.site",
         "documentation": "https://awesomedevopsui.site/docs",
-        "github": "https://github.com/prodevopsguy/awesome-devops-ui",
+        "github": "https://github.com/NotHarshhaa/awesome-devops-ui",
         "tutorial": "https://awesomedevopsui.site/getting-started"
       },
       "featured": false,
@@ -219,7 +219,7 @@
       "links": {
         "website": "https://k8s-learning.live",
         "documentation": "https://k8s-learning.live/docs",
-        "github": "https://github.com/prodevopsguy/k8s-learning",
+        "github": "https://github.com/NotHarshhaa/k8s-learning",
         "tutorial": "https://k8s-learning.live/getting-started"
       },
       "featured": false,
@@ -234,7 +234,7 @@
       "links": {
         "website": "https://kubernetes-dashboard.netlify.app",
         "documentation": "https://kubernetes-dashboard.netlify.app/docs",
-        "github": "https://github.com/prodevopsguy/kubernetes-dashboard",
+        "github": "https://github.com/NotHarshhaa/kubernetes-dashboard",
         "tutorial": "https://kubernetes-dashboard.netlify.app/getting-started"
       },
       "featured": false,

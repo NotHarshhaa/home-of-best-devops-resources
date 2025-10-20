@@ -98,7 +98,7 @@ const Navbar = () => {
             className="hidden border-primary/20 md:flex hover:border-primary/60 hover:bg-primary/5 transition-all"
           >
             <Link
-              href="https://github.com/prodevopsguy/home-of-best-devops-resources"
+              href="https://github.com/NotHarshhaa/home-of-best-devops-resources"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -186,7 +186,7 @@ const Navbar = () => {
                 className="mt-2 w-full justify-start"
               >
                 <Link
-                  href="https://github.com/prodevopsguy/home-of-best-devops-resources"
+                  href="https://github.com/NotHarshhaa/home-of-best-devops-resources"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
