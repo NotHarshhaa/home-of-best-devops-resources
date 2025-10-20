@@ -104,7 +104,7 @@ export default function HomePage() {
               size="lg"
               className="px-8 border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all"
             >
-              <Link href="/categories">View Categories</Link>
+              <Link href="https://github.com/NotHarshhaa">Visit GitHub</Link>
             </Button>
           </motion.div>
         </div>
@@ -236,68 +236,6 @@ export default function HomePage() {
               <Link href="/resources">View All Resources</Link>
             </Button>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Categories Section */}
-      <section className="bg-gradient-to-b from-background to-muted py-24 relative">
-        <div className="absolute inset-0 bg-[url('/dot-pattern.svg')] bg-center opacity-10"></div>
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-16 text-center"
-          >
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              <span className="relative">
-                Browse by Category
-                <span className="absolute -bottom-2 left-1/2 h-1 w-1/3 -translate-x-1/2 bg-gradient-to-r from-primary/50 to-accent/50 rounded-full"></span>
-              </span>
-            </h2>
-            <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto">
-              Find resources organized by different DevOps domains
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
-            {categories.map((category, index) => (
-              <motion.div
-                key={category}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Link
-                  href={`/categories/${category.toLowerCase().replace(/\s+/g, "-")}`}
-                >
-                  <Card className="h-full card-hover-effect bg-card/80 backdrop-blur-sm border-border/60">
-                    <CardHeader>
-                      <CardTitle className="text-center text-lg font-heading relative group">
-                        <span className="relative inline-block">
-                          {category}
-                          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300"></span>
-                        </span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardFooter className="justify-center p-4 pt-0">
-                      <Badge
-                        variant="secondary"
-                        className="bg-accent/10 text-accent-foreground hover:bg-accent/20 transition-colors"
-                      >
-                        {
-                          resourcesData.resources.filter(
-                            (r) => r.category === category,
-                          ).length
-                        }{" "}
-                        resources
-                      </Badge>
-                    </CardFooter>
-                  </Card>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
