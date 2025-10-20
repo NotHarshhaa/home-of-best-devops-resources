@@ -51,7 +51,7 @@ export default function ResourcesPage() {
   const tags = resourcesData.tags.slice(0, 12);
 
   return (
-    <div className="container py-12">
+    <div className="container py-16">
       <div className="mb-16 text-center">
         <h1 className="text-4xl font-bold tracking-tight font-heading sm:text-5xl">
           <span className="gradient-text">DevOps Resources</span>
@@ -61,15 +61,15 @@ export default function ResourcesPage() {
         </p>
       </div>
 
-      <div className="mb-10 grid gap-6 md:grid-cols-4">
+      <div className="mb-10 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-1">
-          <div className="sticky top-20 space-y-6">
+          <div className="sticky top-24 space-y-8">
             <div className="space-y-4">
-              <h3 className="font-medium">Search</h3>
+              <h3 className="font-medium text-lg">Search</h3>
               <div className="relative">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
+                  className="absolute left-3 top-3 h-4 w-4 text-muted-foreground"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -84,17 +84,20 @@ export default function ResourcesPage() {
                 <input
                   type="search"
                   placeholder="Search resources..."
-                  className="w-full rounded-md border border-input bg-transparent px-10 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  className="w-full rounded-md border border-input bg-transparent px-10 py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring shadow-sm"
                 />
               </div>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="font-medium">Categories</h3>
-              <div className="space-y-2">
+            <div className="space-y-5">
+              <h3 className="font-medium text-lg">Categories</h3>
+              <div className="space-y-1 bg-muted/50 rounded-lg p-2">
                 {categories.map((category) => (
-                  <div key={category} className="flex items-center space-x-2">
-                    <Button variant="ghost" className="justify-start px-3">
+                  <div key={category} className="flex items-center">
+                    <Button
+                      variant="ghost"
+                      className="justify-start w-full text-muted-foreground hover:text-primary hover:bg-muted/80 rounded-md px-4 py-2 transition-colors"
+                    >
                       {category === "all" ? "All Categories" : category}
                     </Button>
                   </div>
@@ -102,31 +105,43 @@ export default function ResourcesPage() {
               </div>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="font-medium">Popular Tags</h3>
-              <div className="flex flex-wrap gap-2">
+            <div className="space-y-5">
+              <h3 className="font-medium text-lg">Popular Tags</h3>
+              <div className="flex flex-wrap gap-2 bg-muted/50 rounded-lg p-4">
                 {tags.map((tag) => (
-                  <Badge key={tag} variant="outline" className="cursor-pointer">
+                  <Badge
+                    key={tag}
+                    variant="outline"
+                    className="cursor-pointer bg-background px-3 py-1 hover:bg-primary/5 hover:border-primary/30 transition-colors"
+                  >
                     {tag}
                   </Badge>
                 ))}
               </div>
             </div>
 
-            <Button variant="outline">Clear All Filters</Button>
+            <Button
+              variant="outline"
+              className="w-full bg-background hover:bg-primary/5 border-primary/20 hover:border-primary/50 transition-colors"
+            >
+              Clear All Filters
+            </Button>
           </div>
         </div>
 
         <div className="md:col-span-3">
-          <div className="mb-6 flex items-center justify-between">
-            <p className="text-sm text-muted-foreground">
-              Showing <span className="font-medium">{resources.length}</span>{" "}
+          <div className="mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-muted/30 p-4 rounded-lg">
+            <p className="text-md text-muted-foreground">
+              Showing{" "}
+              <span className="font-medium text-foreground">
+                {resources.length}
+              </span>{" "}
               resources
             </p>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center gap-3">
               <p className="text-sm text-muted-foreground">Sort by:</p>
               <select
-                className="rounded-md border border-input bg-transparent px-3 py-1 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="rounded-md border border-input bg-background px-4 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring shadow-sm"
                 defaultValue="alphabetical"
               >
                 <option value="alphabetical">A-Z</option>
@@ -136,24 +151,24 @@ export default function ResourcesPage() {
             </div>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
             {resources.map((resource) => (
               <div key={resource.id}>
-                <Card className="h-full overflow-hidden card-hover-effect border-border/60 bg-card">
-                  <CardHeader className="pb-2">
+                <Card className="h-full overflow-hidden card-hover-effect border-border/60 bg-card shadow-sm">
+                  <CardHeader className="pb-4 pt-6 px-6">
                     <div className="flex justify-between">
-                      <Badge className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium">
+                      <Badge className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium px-3 py-1">
                         {resource.category}
                       </Badge>
                     </div>
-                    <CardTitle className="mt-4 text-xl">
+                    <CardTitle className="mt-5 text-xl font-heading">
                       {resource.title}
                     </CardTitle>
-                    <CardDescription className="line-clamp-2">
+                    <CardDescription className="line-clamp-2 font-body text-muted-foreground mt-2">
                       {resource.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="mt-2">
+                  <CardContent className="px-6">
                     <div className="flex flex-wrap gap-2">
                       {resource.tags.slice(0, 3).map((tag) => (
                         <Badge
@@ -174,7 +189,7 @@ export default function ResourcesPage() {
                       )}
                     </div>
                   </CardContent>
-                  <CardFooter className="flex justify-between gap-3 pt-4">
+                  <CardFooter className="flex justify-between gap-4 px-6 py-6 border-t border-border/20">
                     <Button
                       asChild
                       variant="outline"
@@ -192,7 +207,7 @@ export default function ResourcesPage() {
                     <Button
                       asChild
                       size="sm"
-                      className="shadow-sm hover:shadow-md transition-all"
+                      className="flex-1 shadow-sm hover:shadow-md transition-all"
                     >
                       <a
                         href={getGithubLink(resource.id)}

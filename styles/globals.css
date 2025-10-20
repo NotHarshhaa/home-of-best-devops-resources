@@ -104,11 +104,23 @@
     }
 
     .card-hover-effect {
-        @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+        @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1 rounded-xl;
     }
 
     .glass-effect {
         @apply bg-opacity-70 backdrop-blur-md backdrop-filter;
+    }
+
+    .resource-card {
+        @apply border border-border/40 p-5 rounded-xl transition-all duration-300;
+    }
+
+    .resource-card-grid {
+        @apply grid gap-8 auto-rows-fr;
+    }
+
+    .card-content-spacing {
+        @apply px-5 py-4;
     }
 }
 
