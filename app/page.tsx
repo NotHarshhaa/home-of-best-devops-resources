@@ -59,27 +59,27 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-24 md:py-32">
+      <section className="relative overflow-hidden py-16 sm:py-20 md:py-32">
         <div className="absolute inset-0 bg-gradient-to-b from-background to-muted"></div>
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
 
         {/* Background animated circles */}
-        <div className="absolute top-0 -left-4 w-72 h-72 bg-primary/30 rounded-full filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute top-0 -right-4 w-72 h-72 bg-accent/30 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-32 left-20 w-72 h-72 bg-secondary/30 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-0 -left-4 w-40 sm:w-72 h-40 sm:h-72 bg-primary/30 rounded-full filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute top-0 -right-4 w-40 sm:w-72 h-40 sm:h-72 bg-accent/30 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-32 left-20 w-40 sm:w-72 h-40 sm:h-72 bg-secondary/30 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
 
-        <div className="container relative flex flex-col items-center justify-center space-y-8 text-center z-10">
+        <div className="container relative flex flex-col items-center justify-center space-y-4 sm:space-y-8 text-center z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="font-heading text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl">
               <span className="gradient-text">
                 Home of Best DevOps Resources
               </span>
             </h1>
-            <p className="mt-6 max-w-3xl mx-auto text-xl text-muted-foreground md:text-2xl font-body">
+            <p className="mt-3 sm:mt-6 max-w-3xl mx-auto text-base sm:text-xl text-muted-foreground md:text-2xl font-body">
               Your Ultimate Collection of DevOps Learning Materials, Projects,
               and Tools
             </p>
@@ -89,12 +89,12 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 mt-6"
+            className="flex flex-col space-y-2 sm:flex-row sm:space-x-4 sm:space-y-0 mt-3 sm:mt-6"
           >
             <Button
               asChild
               size="lg"
-              className="px-8 shadow-md hover:shadow-lg transition-all"
+              className="px-4 sm:px-8 text-sm sm:text-base shadow-md hover:shadow-lg transition-all"
             >
               <Link href="/resources">Browse All Resources</Link>
             </Button>
@@ -102,7 +102,7 @@ export default function HomePage() {
               asChild
               variant="outline"
               size="lg"
-              className="px-8 border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all"
+              className="px-4 sm:px-8 text-sm sm:text-base border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all"
             >
               <Link href="https://github.com/NotHarshhaa">Visit GitHub</Link>
             </Button>
@@ -111,26 +111,26 @@ export default function HomePage() {
       </section>
 
       {/* Featured Resources Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-12 sm:py-24 relative overflow-hidden">
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-16 text-center"
+            className="mb-8 sm:mb-16 text-center"
           >
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            <h2 className="font-heading text-2xl font-bold tracking-tight sm:text-4xl md:text-5xl">
               <span className="relative">
                 Featured Resources
                 <span className="absolute -bottom-2 left-1/2 h-1 w-1/3 -translate-x-1/2 bg-gradient-to-r from-primary/50 to-accent/50 rounded-full"></span>
               </span>
             </h2>
-            <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-3 sm:mt-6 text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto">
               Hand-picked resources to accelerate your DevOps learning journey
             </p>
           </motion.div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {featuredResources.map((resource, index) => (
               <motion.div
                 key={resource.id}
@@ -139,26 +139,26 @@ export default function HomePage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full overflow-hidden card-hover-effect border-border/60 bg-card">
-                  <CardHeader className="pb-2 space-y-2">
+                  <CardHeader className="pb-2 space-y-1 sm:space-y-2 p-4 sm:p-6">
                     <div className="flex justify-between items-center">
-                      <Badge className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium">
+                      <Badge className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium text-xs sm:text-sm px-2 py-0.5 sm:px-3 sm:py-1">
                         {resource.category}
                       </Badge>
                     </div>
-                    <CardTitle className="mt-3 text-xl font-heading">
+                    <CardTitle className="mt-2 sm:mt-3 text-lg sm:text-xl font-heading">
                       {resource.title}
                     </CardTitle>
-                    <CardDescription className="line-clamp-2 font-body text-muted-foreground">
+                    <CardDescription className="line-clamp-2 font-body text-muted-foreground text-sm">
                       {resource.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="mt-2">
+                  <CardContent className="mt-1 sm:mt-2 p-4 sm:p-6">
                     <div className="flex flex-wrap gap-2">
                       {resource.tags.slice(0, 3).map((tag) => (
                         <Badge
                           key={tag}
                           variant="secondary"
-                          className="bg-secondary/60 text-secondary-foreground hover:bg-secondary/80 transition-colors"
+                          className="bg-secondary/60 text-secondary-foreground hover:bg-secondary/80 transition-colors text-xs sm:text-sm px-2 py-0.5 sm:px-3 sm:py-1"
                         >
                           {tag}
                         </Badge>
@@ -166,19 +166,19 @@ export default function HomePage() {
                       {resource.tags.length > 3 && (
                         <Badge
                           variant="outline"
-                          className="border-primary/20 text-muted-foreground hover:border-primary/40 transition-colors"
+                          className="border-primary/20 text-muted-foreground hover:border-primary/40 transition-colors text-xs sm:text-sm px-2 py-0.5 sm:px-3 sm:py-1"
                         >
                           +{resource.tags.length - 3}
                         </Badge>
                       )}
                     </div>
                   </CardContent>
-                  <CardFooter className="flex justify-between gap-3 pt-4">
+                  <CardFooter className="flex justify-between gap-2 sm:gap-3 pt-2 sm:pt-4 p-4 sm:p-6">
                     <Button
                       asChild
                       variant="outline"
                       size="sm"
-                      className="flex-1 border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all"
+                      className="flex-1 border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all text-xs sm:text-sm py-1 h-8 sm:h-9"
                     >
                       <a
                         href={resource.links.website}
@@ -191,7 +191,7 @@ export default function HomePage() {
                     <Button
                       asChild
                       size="sm"
-                      className="flex-1 shadow-sm hover:shadow-md transition-all"
+                      className="flex-1 shadow-sm hover:shadow-md transition-all text-xs sm:text-sm py-1 h-8 sm:h-9"
                     >
                       <a
                         href={getGithubLink(resource.id)}
@@ -208,7 +208,7 @@ export default function HomePage() {
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          className="mr-1"
+                          className="mr-1 h-3 w-3 sm:h-4 sm:w-4"
                         >
                           <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
                           <path d="M9 18c-4.51 2-5-2-7-2" />
@@ -226,12 +226,12 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="mt-16 text-center"
+            className="mt-8 sm:mt-16 text-center"
           >
             <Button
               asChild
               size="lg"
-              className="px-8 shadow-md hover:shadow-lg transition-all"
+              className="px-4 sm:px-8 text-sm sm:text-base shadow-md hover:shadow-lg transition-all"
             >
               <Link href="/resources">View All Resources</Link>
             </Button>
@@ -240,23 +240,23 @@ export default function HomePage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24">
+      <section className="py-12 sm:py-24">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="rounded-xl overflow-hidden relative"
+            className="rounded-lg sm:rounded-xl overflow-hidden relative"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-90"></div>
             <div className="absolute inset-0 bg-[url('/cta-pattern.svg')] bg-cover opacity-10"></div>
-            <div className="relative z-10 p-10 text-primary-foreground md:p-14">
-              <div className="grid gap-8 md:grid-cols-2">
+            <div className="relative z-10 p-6 sm:p-10 text-primary-foreground md:p-14">
+              <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
                 <div>
-                  <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-4xl">
+                  <h2 className="text-2xl font-heading font-bold tracking-tighter sm:text-4xl">
                     Accelerate Your DevOps Journey
                   </h2>
-                  <p className="mt-6 text-xl text-primary-foreground/90">
+                  <p className="mt-3 sm:mt-6 text-sm sm:text-xl text-primary-foreground/90">
                     Explore our comprehensive collection of learning resources,
                     projects, and tools to boost your DevOps skills and career.
                   </p>
@@ -266,7 +266,7 @@ export default function HomePage() {
                     asChild
                     size="lg"
                     variant="secondary"
-                    className="font-bold px-8 shadow-lg hover:shadow-xl transition-all"
+                    className="font-bold px-4 sm:px-8 text-sm sm:text-base shadow-lg hover:shadow-xl transition-all"
                   >
                     <a
                       href="https://github.com/NotHarshhaa/home-of-best-devops-resources"

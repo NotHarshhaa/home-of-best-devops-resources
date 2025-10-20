@@ -12,8 +12,8 @@ const Footer = () => {
     <footer className="border-t border-border/40 bg-background relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/footer-pattern.svg')] bg-repeat opacity-5"></div>
 
-      <div className="container py-12 md:py-16 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-16 mb-10">
+      <div className="container py-8 sm:py-12 md:py-16 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between gap-6 sm:gap-10 md:gap-16 mb-6 sm:mb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -39,15 +39,15 @@ const Footer = () => {
                 <path d="M12 16v-4" />
                 <path d="M15 12h-6" />
               </svg>
-              <h3 className="text-xl font-heading font-bold gradient-text">
+              <h3 className="text-lg sm:text-xl font-heading font-bold gradient-text">
                 DevOps Resources
               </h3>
             </div>
-            <p className="text-muted-foreground font-body">
+            <p className="text-muted-foreground font-body text-sm sm:text-base">
               Your Ultimate Collection of DevOps Learning Materials, Projects,
               and Tools for accelerating your DevOps journey.
             </p>
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6">
               <Button
                 asChild
                 variant="outline"
@@ -148,10 +148,10 @@ const Footer = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-primary">
+              <h4 className="mb-3 sm:mb-4 text-xs sm:text-sm font-bold uppercase tracking-wider text-primary">
                 Quick Links
               </h4>
-              <ul className="space-y-3 text-sm font-medium">
+              <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm font-medium">
                 <li>
                   <Link
                     href="/"
@@ -197,10 +197,10 @@ const Footer = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-accent">
+              <h4 className="mb-3 sm:mb-4 text-xs sm:text-sm font-bold uppercase tracking-wider text-accent">
                 Categories
               </h4>
-              <ul className="space-y-3 text-sm font-medium">
+              <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm font-medium">
                 <li>
                   <Link
                     href="/categories/orchestration"
@@ -247,19 +247,19 @@ const Footer = () => {
               viewport={{ once: true }}
               className="col-span-2 md:col-span-1"
             >
-              <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-primary">
+              <h4 className="mb-3 sm:mb-4 text-xs sm:text-sm font-bold uppercase tracking-wider text-primary">
                 Subscribe
               </h4>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
                 Stay updated with the latest DevOps resources and news.
               </p>
               <div className="flex gap-2">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex h-8 sm:h-10 w-full rounded-md border border-input bg-background px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 />
-                <Button size="sm" className="h-10">
+                <Button size="sm" className="h-8 sm:h-10 text-xs sm:text-sm">
                   Subscribe
                 </Button>
               </div>
@@ -272,13 +272,13 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: true }}
-          className="border-t border-border/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground"
+          className="border-t border-border/30 pt-4 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground"
         >
           <p>
             © {currentYear} NotHarshhaa | Home of Best DevOps Resources. All
             rights reserved.
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-4 sm:gap-6">
             <Link
               href="/privacy"
               className="hover:text-primary transition-colors"

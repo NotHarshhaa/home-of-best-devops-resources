@@ -122,6 +122,81 @@
     .card-content-spacing {
         @apply px-5 py-4;
     }
+
+    /* Mobile compact styles */
+    @media (max-width: 768px) {
+        .container {
+            @apply px-3;
+        }
+
+        h1 {
+            @apply text-3xl;
+        }
+
+        h2 {
+            @apply text-2xl;
+        }
+
+        p {
+            @apply text-sm;
+        }
+
+        .card-hover-effect {
+            @apply hover:shadow-md hover:translate-y-0;
+        }
+
+        .card {
+            @apply rounded-lg;
+        }
+
+        .card-header {
+            @apply pb-2 pt-3 px-4;
+        }
+
+        .card-content {
+            @apply px-4 py-2;
+        }
+
+        .card-footer {
+            @apply px-4 py-3;
+        }
+
+        .badge {
+            @apply px-2 py-0.5 text-xs;
+        }
+
+        .btn {
+            @apply py-1 text-sm;
+        }
+
+        .gap-8 {
+            @apply gap-4;
+        }
+
+        .py-24 {
+            @apply py-12;
+        }
+
+        .py-16 {
+            @apply py-8;
+        }
+
+        .mb-16 {
+            @apply mb-8;
+        }
+
+        .mb-12 {
+            @apply mb-6;
+        }
+
+        .space-y-8 {
+            @apply space-y-4;
+        }
+
+        .space-y-6 {
+            @apply space-y-3;
+        }
+    }
 }
 
 @keyframes animateIn {
