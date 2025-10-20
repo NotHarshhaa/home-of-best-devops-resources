@@ -16,6 +16,38 @@ import { motion } from "framer-motion";
 
 import resourcesData from "@/data/resources.json";
 
+// Function to map resource IDs to GitHub links
+const getGithubLink = (id: string) => {
+  const githubLinks: { [key: string]: string } = {
+    "projects-hub": "https://github.com/NotHarshhaa/DevOps-Projects",
+    "ultimate-docs": "https://gitlab.com/NotHarshhaa/docs-portal",
+    "repositories-central":
+      "https://github.com/NotHarshhaa/github-repo-status-tracker",
+    "jobs-portal": "https://github.com/NotHarshhaa/jobs.prodevopsguytech.com",
+    "devops-blog": "https://github.com/NotHarshhaa/prodevopsguy.hashnode.dev",
+    "cloud-blog": "https://github.com/NotHarshhaa/prodevopsguy.hashnode.dev",
+    "docker-to-kubernetes":
+      "https://github.com/NotHarshhaa/From-Docker-to-Kubernetes",
+    "devops-engineering-lab":
+      "https://github.com/NotHarshhaa/DevOps-Engineering",
+    "devops-tool-guides":
+      "https://github.com/NotHarshhaa/devops-tools-setups-installations",
+    "devops-cheatsheet": "https://github.com/NotHarshhaa/devops-cheatsheet",
+    "devops-environment-toolkit":
+      "https://github.com/NotHarshhaa/devops-environment-toolkit-beginners",
+    "devops-tools-collection": "https://github.com/NotHarshhaa/devops-tools",
+    "devops-monitoring-in-a-box":
+      "https://github.com/NotHarshhaa/devops-monitoring-in-a-box",
+    "awesome-devops-ui": "https://github.com/NotHarshhaa/awesome-devops-cloud",
+    "k8s-learning":
+      "https://github.com/NotHarshhaa/Certified_Kubernetes_Administrator",
+    "kubernetes-dashboard":
+      "https://github.com/NotHarshhaa/kubernetes-dashboard",
+  };
+
+  return githubLinks[id] || "https://github.com/NotHarshhaa";
+};
+
 export default function HomePage() {
   // Featured resources to display on home page
   const featuredResources = resourcesData.resources
@@ -161,7 +193,28 @@ export default function HomePage() {
                       size="sm"
                       className="flex-1 shadow-sm hover:shadow-md transition-all"
                     >
-                      <Link href={`/resources/${resource.id}`}>Learn More</Link>
+                      <a
+                        href={getGithubLink(resource.id)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-1"
+                        >
+                          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                          <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg>
+                        GitHub Source
+                      </a>
                     </Button>
                   </CardFooter>
                 </Card>

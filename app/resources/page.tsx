@@ -13,6 +13,38 @@ import {
 
 import resourcesData from "@/data/resources.json";
 
+// Function to map resource IDs to GitHub links
+const getGithubLink = (id: string) => {
+  const githubLinks: { [key: string]: string } = {
+    "projects-hub": "https://github.com/NotHarshhaa/DevOps-Projects",
+    "ultimate-docs": "https://gitlab.com/NotHarshhaa/docs-portal",
+    "repositories-central":
+      "https://github.com/NotHarshhaa/github-repo-status-tracker",
+    "jobs-portal": "https://github.com/NotHarshhaa/jobs.prodevopsguytech.com",
+    "devops-blog": "https://github.com/NotHarshhaa/prodevopsguy.hashnode.dev",
+    "cloud-blog": "https://github.com/NotHarshhaa/prodevopsguy.hashnode.dev",
+    "docker-to-kubernetes":
+      "https://github.com/NotHarshhaa/From-Docker-to-Kubernetes",
+    "devops-engineering-lab":
+      "https://github.com/NotHarshhaa/DevOps-Engineering",
+    "devops-tool-guides":
+      "https://github.com/NotHarshhaa/devops-tools-setups-installations",
+    "devops-cheatsheet": "https://github.com/NotHarshhaa/devops-cheatsheet",
+    "devops-environment-toolkit":
+      "https://github.com/NotHarshhaa/devops-environment-toolkit-beginners",
+    "devops-tools-collection": "https://github.com/NotHarshhaa/devops-tools",
+    "devops-monitoring-in-a-box":
+      "https://github.com/NotHarshhaa/devops-monitoring-in-a-box",
+    "awesome-devops-ui": "https://github.com/NotHarshhaa/awesome-devops-cloud",
+    "k8s-learning":
+      "https://github.com/NotHarshhaa/Certified_Kubernetes_Administrator",
+    "kubernetes-dashboard":
+      "https://github.com/NotHarshhaa/kubernetes-dashboard",
+  };
+
+  return githubLinks[id] || "https://github.com/NotHarshhaa";
+};
+
 export default function ResourcesPage() {
   const resources = resourcesData.resources;
   const categories = resourcesData.categories;
@@ -20,11 +52,11 @@ export default function ResourcesPage() {
 
   return (
     <div className="container py-12">
-      <div className="mb-12 text-center">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-          DevOps Resources
+      <div className="mb-16 text-center">
+        <h1 className="text-4xl font-bold tracking-tight font-heading sm:text-5xl">
+          <span className="gradient-text">DevOps Resources</span>
         </h1>
-        <p className="mt-4 text-xl text-muted-foreground">
+        <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto font-body">
           Browse our curated collection of the best DevOps tools and resources
         </p>
       </div>
@@ -107,10 +139,12 @@ export default function ResourcesPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {resources.map((resource) => (
               <div key={resource.id}>
-                <Card className="h-full overflow-hidden transition-all hover:shadow-lg">
+                <Card className="h-full overflow-hidden card-hover-effect border-border/60 bg-card">
                   <CardHeader className="pb-2">
                     <div className="flex justify-between">
-                      <Badge>{resource.category}</Badge>
+                      <Badge className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium">
+                        {resource.category}
+                      </Badge>
                     </div>
                     <CardTitle className="mt-4 text-xl">
                       {resource.title}
@@ -122,19 +156,31 @@ export default function ResourcesPage() {
                   <CardContent className="mt-2">
                     <div className="flex flex-wrap gap-2">
                       {resource.tags.slice(0, 3).map((tag) => (
-                        <Badge key={tag} variant="secondary">
+                        <Badge
+                          key={tag}
+                          variant="secondary"
+                          className="bg-secondary/60 text-secondary-foreground hover:bg-secondary/80 transition-colors"
+                        >
                           {tag}
                         </Badge>
                       ))}
                       {resource.tags.length > 3 && (
-                        <Badge variant="outline">
+                        <Badge
+                          variant="outline"
+                          className="border-primary/20 text-muted-foreground hover:border-primary/40 transition-colors"
+                        >
                           +{resource.tags.length - 3}
                         </Badge>
                       )}
                     </div>
                   </CardContent>
-                  <CardFooter className="flex justify-between">
-                    <Button asChild variant="outline" size="sm">
+                  <CardFooter className="flex justify-between gap-3 pt-4">
+                    <Button
+                      asChild
+                      variant="outline"
+                      size="sm"
+                      className="flex-1 border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all"
+                    >
                       <a
                         href={resource.links.website}
                         target="_blank"
@@ -143,8 +189,33 @@ export default function ResourcesPage() {
                         Visit Website
                       </a>
                     </Button>
-                    <Button asChild size="sm">
-                      <Link href={`/resources/${resource.id}`}>Learn More</Link>
+                    <Button
+                      asChild
+                      size="sm"
+                      className="shadow-sm hover:shadow-md transition-all"
+                    >
+                      <a
+                        href={getGithubLink(resource.id)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-1"
+                        >
+                          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                          <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg>
+                        GitHub Source
+                      </a>
                     </Button>
                   </CardFooter>
                 </Card>
