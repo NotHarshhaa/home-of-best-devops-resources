@@ -1,16 +1,22 @@
-# Home of Best DevOps Resources
+# 🚀 **Home of Best DevOps Resources**
 
 Your Ultimate Collection of DevOps Learning Materials, Projects, and Tools for accelerating your DevOps journey.
 
-![Home of Best DevOps Resources](https://github.com/NotHarshhaa/home-of-best-devops-resources/assets/NotHarshhaa/screenshot.png)
+<p align="center">
+  <img src="https://i.ibb.co/cc5mQN2c/image-1.png" alt="Home of Best DevOps Resources logo" width="800" />
+</p>
 
-## About
+---
+
+## 📖 **About**
 
 The Home of Best DevOps Resources project was created to be your ultimate hub for high-quality DevOps learning content, hands-on projects, and career advancement resources. 
 
 In the rapidly evolving world of DevOps, we provide a centralized collection of resources to help DevOps enthusiasts at every stage of their journey - from beginners to advanced practitioners. Our mission is to accelerate your DevOps career through carefully selected and organized materials.
 
-## Features
+---
+
+## 🚀 **Features**
 
 - 💻 **Real-Time Projects**: Hands-on DevOps projects from beginner to advanced levels
 - 📚 **Extensive Learning Materials**: Over 900+ curated resources for complete DevOps education
@@ -18,7 +24,9 @@ In the rapidly evolving world of DevOps, we provide a centralized collection of 
 - 🐳 **Specialized Content**: Dedicated resources for Docker, Kubernetes, and cloud technologies
 - 🛠️ **Practical Tools**: Ready-to-use environments, cheat sheets, and automation solutions
 
-## Tech Stack
+---
+
+## 🚧 **Tech Stack**
 
 | Area       | Technology                           |
 | ---------- | ----------------------------------- |
@@ -29,7 +37,9 @@ In the rapidly evolving world of DevOps, we provide a centralized collection of 
 | Deployment | Vercel                              |
 | Source     | GitHub public repo                  |
 
-## Getting Started
+---
+
+## 🚦 **Getting Started**
 
 ### Prerequisites
 
@@ -63,7 +73,9 @@ yarn dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-## Adding New Resources
+---
+
+## 📦 **Adding New Resources**
 
 All resources are stored in the `data/resources.json` file. To add a new resource:
 
@@ -91,7 +103,9 @@ Example resource format:
 }
 ```
 
-## Contributing
+---
+
+## 🤝 **Contributing**
 
 We welcome contributions to the Home of Best DevOps Resources project! Here's how you can help:
 
@@ -102,11 +116,45 @@ We welcome contributions to the Home of Best DevOps Resources project! Here's ho
 
 Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed guidelines on how to contribute.
 
-## License
+---
+
+## 📝 **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgements
+---
+
+## 🙏 **Acknowledgements**
 
 - Thanks to all [contributors](https://github.com/NotHarshhaa/home-of-best-devops-resources/graphs/contributors) who have helped build this resource
 - The entire DevOps community for continuous learning and knowledge sharing
+
+---
+
+## **⭐ Hit the Star!**  
+
+If you find this repository helpful and plan to use it for learning, please consider giving it a star ⭐. Your support motivates me to keep improving and adding more valuable content! 🚀  
+
+---
+
+## 🛠️ **Author & Community**  
+
+This project is crafted with passion by **[Harshhaa](https://github.com/NotHarshhaa)** 💡.  
+
+I’d love to hear your feedback! Feel free to open an issue, suggest improvements, or just drop by for a discussion. Let’s build a strong DevOps community together!  
+
+---
+
+## 📧 **Let's Connect!**  
+
+Stay connected and explore more DevOps content with me:  
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/harshhaa-vardhan-reddy)  [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/NotHarshhaa)  [![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/prodevopsguy)  [![Dev.to](https://img.shields.io/badge/Dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/notharshhaa)  [![Hashnode](https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white)](https://hashnode.com/@prodevopsguy)  
+
+---
+
+## 📢 **Stay Updated!**  
+
+Want to stay up to date with the latest DevOps trends, best practices, and project updates? Follow me on my blogs and social channels!  
+
+![Follow Me](https://imgur.com/2j7GSPs.png)
