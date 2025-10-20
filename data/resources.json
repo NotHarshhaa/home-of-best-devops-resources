@@ -1,0 +1,300 @@
+{
+  "resources": [
+    {
+      "id": "projects-hub",
+      "title": "Real-Time Projects Hub",
+      "description": "Hands-on DevOps projects from beginner to advanced",
+      "category": "Learning",
+      "tags": ["Projects", "Hands-on", "Learning"],
+      "links": {
+        "website": "https://projects.prodevopsguytech.com",
+        "documentation": "https://projects.prodevopsguytech.com/docs",
+        "github": "https://github.com/prodevopsguy/projects-hub",
+        "tutorial": "https://projects.prodevopsguytech.com/getting-started"
+      },
+      "featured": true,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "ultimate-docs",
+      "title": "Ultimate Docs Portal",
+      "description": "900+ curated DevOps learning materials",
+      "category": "Documentation",
+      "tags": ["Docs", "Learning", "Guides"],
+      "links": {
+        "website": "https://docs.prodevopsguytech.com",
+        "documentation": "https://docs.prodevopsguytech.com",
+        "github": "https://github.com/prodevopsguy/ultimate-docs",
+        "tutorial": "https://docs.prodevopsguytech.com/getting-started"
+      },
+      "featured": true,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "repositories-central",
+      "title": "Repositories Central",
+      "description": "Collection of scripts, infrastructure code & prep content",
+      "category": "Code",
+      "tags": ["Scripts", "Infrastructure", "Code"],
+      "links": {
+        "website": "https://repos.prodevopsguytech.com",
+        "documentation": "https://repos.prodevopsguytech.com/docs",
+        "github": "https://github.com/prodevopsguy/repositories-central",
+        "tutorial": "https://repos.prodevopsguytech.com/getting-started"
+      },
+      "featured": true,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "jobs-portal",
+      "title": "Jobs Portal",
+      "description": "Find your next DevOps career opportunity",
+      "category": "Career",
+      "tags": ["Jobs", "Career", "Opportunities"],
+      "links": {
+        "website": "https://jobs.prodevopsguytech.com",
+        "documentation": "https://jobs.prodevopsguytech.com/docs",
+        "github": "https://github.com/prodevopsguy/jobs-portal",
+        "tutorial": "https://jobs.prodevopsguytech.com/getting-started"
+      },
+      "featured": true,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "devops-blog",
+      "title": "DevOps Blog",
+      "description": "Deep dives into DevOps practices & tutorials",
+      "category": "Blog",
+      "tags": ["Tutorials", "Practices", "Guides"],
+      "links": {
+        "website": "https://blog.prodevopsguytech.com",
+        "documentation": "https://blog.prodevopsguytech.com/archive",
+        "github": "https://github.com/prodevopsguy/devops-blog",
+        "tutorial": "https://blog.prodevopsguytech.com/start-here"
+      },
+      "featured": true,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "cloud-blog",
+      "title": "Cloud Blog",
+      "description": "Cloud architecture & implementation guides",
+      "category": "Cloud",
+      "tags": ["Cloud", "Architecture", "Guides"],
+      "links": {
+        "website": "https://cloud.prodevopsguytech.com",
+        "documentation": "https://cloud.prodevopsguytech.com/archive",
+        "github": "https://github.com/prodevopsguy/cloud-blog",
+        "tutorial": "https://cloud.prodevopsguytech.com/start-here"
+      },
+      "featured": false,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "docker-to-kubernetes",
+      "title": "Docker to Kubernetes",
+      "description": "Master containerization journey",
+      "category": "Containers",
+      "tags": ["Docker", "Kubernetes", "Containerization"],
+      "links": {
+        "website": "https://dockertokubernetes.live",
+        "documentation": "https://dockertokubernetes.live/docs",
+        "github": "https://github.com/prodevopsguy/docker-to-kubernetes",
+        "tutorial": "https://dockertokubernetes.live/getting-started"
+      },
+      "featured": true,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "devops-engineering-lab",
+      "title": "DevOps Engineering Lab",
+      "description": "Hands-on CI/CD & automation",
+      "category": "CI/CD",
+      "tags": ["CI/CD", "Automation", "Hands-on"],
+      "links": {
+        "website": "https://www.devops-engineering.site",
+        "documentation": "https://www.devops-engineering.site/docs",
+        "github": "https://github.com/prodevopsguy/devops-engineering-lab",
+        "tutorial": "https://www.devops-engineering.site/getting-started"
+      },
+      "featured": true,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "devops-tool-guides",
+      "title": "DevOps Tool Guides",
+      "description": "Setup & installation guides",
+      "category": "Guides",
+      "tags": ["Installation", "Setup", "Tools"],
+      "links": {
+        "website": "https://www.devopsguides.site",
+        "documentation": "https://www.devopsguides.site/docs",
+        "github": "https://github.com/prodevopsguy/devops-tool-guides",
+        "tutorial": "https://www.devopsguides.site/getting-started"
+      },
+      "featured": false,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "devops-cheatsheet",
+      "title": "DevOps Cheatsheet",
+      "description": "Comprehensive tools & practices",
+      "category": "Reference",
+      "tags": ["Cheatsheet", "Reference", "Quick Guide"],
+      "links": {
+        "website": "https://cheatsheet.prodevopsguytech.com",
+        "documentation": "https://cheatsheet.prodevopsguytech.com/all",
+        "github": "https://github.com/prodevopsguy/devops-cheatsheet",
+        "tutorial": "https://cheatsheet.prodevopsguytech.com/how-to-use"
+      },
+      "featured": false,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "devops-environment-toolkit",
+      "title": "DevOps Environment Toolkit",
+      "description": "Ready-to-use local setup with all essential tools for your DevOps journey",
+      "category": "Tooling",
+      "tags": ["Environment", "Setup", "Local Development"],
+      "links": {
+        "website": "https://devops-environment-toolkit.vercel.app",
+        "documentation": "https://devops-environment-toolkit.vercel.app/docs",
+        "github": "https://github.com/prodevopsguy/devops-environment-toolkit",
+        "tutorial": "https://devops-environment-toolkit.vercel.app/getting-started"
+      },
+      "featured": false,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "devops-tools-collection",
+      "title": "DevOps Tools Collection",
+      "description": "Comprehensive collection of essential DevOps tools for development, deployment, monitoring, and security",
+      "category": "Tooling",
+      "tags": ["Tools", "Collection", "DevOps"],
+      "links": {
+        "website": "https://tools.prodevopsguytech.com",
+        "documentation": "https://tools.prodevopsguytech.com/docs",
+        "github": "https://github.com/prodevopsguy/devops-tools-collection",
+        "tutorial": "https://tools.prodevopsguytech.com/getting-started"
+      },
+      "featured": false,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "devops-monitoring-in-a-box",
+      "title": "DevOps Monitoring in a Box",
+      "description": "Ready-to-use advanced monitoring platform with Prometheus, Grafana, Loki, Alertmanager, and Node Exporter",
+      "category": "Monitoring",
+      "tags": ["Monitoring", "Prometheus", "Grafana"],
+      "links": {
+        "website": "https://devops-monitoring-in-a-box.vercel.app",
+        "documentation": "https://devops-monitoring-in-a-box.vercel.app/docs",
+        "github": "https://github.com/prodevopsguy/devops-monitoring-in-a-box",
+        "tutorial": "https://devops-monitoring-in-a-box.vercel.app/getting-started"
+      },
+      "featured": false,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "awesome-devops-ui",
+      "title": "Awesome DevOps UI",
+      "description": "Curated collection of beautiful, powerful UI-based tools for DevOps and Cloud professionals",
+      "category": "UI",
+      "tags": ["UI", "Tools", "Design"],
+      "links": {
+        "website": "https://awesomedevopsui.site",
+        "documentation": "https://awesomedevopsui.site/docs",
+        "github": "https://github.com/prodevopsguy/awesome-devops-ui",
+        "tutorial": "https://awesomedevopsui.site/getting-started"
+      },
+      "featured": false,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "k8s-learning",
+      "title": "K8s Learning",
+      "description": "Master Kubernetes from scratch and become a Certified Kubernetes Administrator (CKA)",
+      "category": "Kubernetes",
+      "tags": ["Kubernetes", "CKA", "Learning"],
+      "links": {
+        "website": "https://k8s-learning.live",
+        "documentation": "https://k8s-learning.live/docs",
+        "github": "https://github.com/prodevopsguy/k8s-learning",
+        "tutorial": "https://k8s-learning.live/getting-started"
+      },
+      "featured": false,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    },
+    {
+      "id": "kubernetes-dashboard",
+      "title": "Kubernetes Dashboard",
+      "description": "Kubernetes dashboard integrated with health checks, Trivy scanning and pod monitoring",
+      "category": "Kubernetes",
+      "tags": ["Dashboard", "Monitoring", "Security"],
+      "links": {
+        "website": "https://kubernetes-dashboard.netlify.app",
+        "documentation": "https://kubernetes-dashboard.netlify.app/docs",
+        "github": "https://github.com/prodevopsguy/kubernetes-dashboard",
+        "tutorial": "https://kubernetes-dashboard.netlify.app/getting-started"
+      },
+      "featured": false,
+      "image": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png"
+    }
+  ],
+  "categories": [
+    "Learning",
+    "Documentation",
+    "Code",
+    "Career",
+    "Blog",
+    "Cloud",
+    "Containers",
+    "CI/CD",
+    "Guides",
+    "Reference",
+    "Tooling",
+    "Monitoring",
+    "UI",
+    "Kubernetes"
+  ],
+  "tags": [
+    "Projects",
+    "Hands-on",
+    "Learning",
+    "Docs",
+    "Guides",
+    "Scripts",
+    "Infrastructure",
+    "Code",
+    "Jobs",
+    "Career",
+    "Opportunities",
+    "Tutorials",
+    "Practices",
+    "Cloud",
+    "Architecture",
+    "Docker",
+    "Kubernetes",
+    "Containerization",
+    "CI/CD",
+    "Automation",
+    "Installation",
+    "Setup",
+    "Tools",
+    "Cheatsheet",
+    "Reference",
+    "Quick Guide",
+    "Environment",
+    "Local Development",
+    "Collection",
+    "DevOps",
+    "Monitoring",
+    "Prometheus",
+    "Grafana",
+    "UI",
+    "Design",
+    "CKA",
+    "Dashboard",
+    "Security"
+  ]
+}
