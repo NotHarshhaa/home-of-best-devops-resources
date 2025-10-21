@@ -197,8 +197,8 @@ export default function AboutPage() {
                 <div>
                   <h3 className="font-medium">Detailed Information</h3>
                   <p className="text-muted-foreground">
-                    Comprehensive details about each resource, including links to
-                    documentation and source code.
+                    Comprehensive details about each resource, including links
+                    to documentation and source code.
                   </p>
                 </div>
               </div>
@@ -235,18 +235,14 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent>
               <p>
-                Start by forking our GitHub repository. This creates a copy of the
-                project that you can modify without affecting the original.
+                Start by forking our GitHub repository. This creates a copy of
+                the project that you can modify without affecting the original.
               </p>
             </CardContent>
             <CardFooter>
-              <Button
-                asChild
-                variant="outline"
-                className="w-full"
-              >
+              <Button asChild variant="outline" className="w-full">
                 <a
-                  href="https://github.com/yourusername/home-of-best-devops-resources"
+                  href="https://github.com/NotHarshhaa/home-of-best-devops-resources"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -284,13 +280,9 @@ export default function AboutPage() {
               </p>
             </CardContent>
             <CardFooter>
-              <Button
-                asChild
-                variant="outline"
-                className="w-full"
-              >
+              <Button asChild variant="outline" className="w-full">
                 <a
-                  href="https://github.com/yourusername/home-of-best-devops-resources/blob/main/data/resources.json"
+                  href="https://github.com/NotHarshhaa/home-of-best-devops-resources/blob/main/data/resources.json"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -323,18 +315,14 @@ export default function AboutPage() {
             <CardContent>
               <p>
                 Once you've made your changes, submit a pull request. Our team
-                will review it and merge it into the main project if it meets our
-                quality standards.
+                will review it and merge it into the main project if it meets
+                our quality standards.
               </p>
             </CardContent>
             <CardFooter>
-              <Button
-                asChild
-                variant="outline"
-                className="w-full"
-              >
+              <Button asChild variant="outline" className="w-full">
                 <a
-                  href="https://github.com/yourusername/home-of-best-devops-resources/pulls"
+                  href="https://github.com/NotHarshhaa/home-of-best-devops-resources/pulls"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -347,53 +335,40 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-16">
-        <h2 className="mb-8 text-center text-2xl font-bold">
-          Meet Our Contributors
-        </h2>
+        <h2 className="mb-8 text-center text-2xl font-bold">Project Author</h2>
         <motion.div
           variants={contributorVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          className="flex justify-center"
         >
-          {Array.from({ length: 8 }).map((_, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card>
-                <CardHeader className="pb-2 text-center">
-                  <div className="mx-auto h-16 w-16 overflow-hidden rounded-full bg-muted">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="64"
-                      height="64"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-full w-full text-muted-foreground/50"
-                    >
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                      <circle cx="12" cy="7" r="4" />
-                    </svg>
-                  </div>
-                  <CardTitle className="mt-2 text-base">
-                    Contributor {index + 1}
-                  </CardTitle>
-                  <CardDescription className="text-xs">
-                    DevOps Engineer
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="text-center text-sm">
-                  <p>
-                    Contributed {Math.floor(Math.random() * 10) + 1} resources
-                  </p>
-                </CardContent>
-                <CardFooter className="flex justify-center">
-                  <Button variant="ghost" size="sm" asChild>
+          <motion.div variants={itemVariants}>
+            <Card className="max-w-md mx-auto">
+              <CardHeader className="pb-2 text-center">
+                <div className="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-primary/20">
+                  <img
+                    src="https://github.com/NotHarshhaa.png"
+                    alt="Harshhaa"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <CardTitle className="mt-4 text-xl">H A R S H H A A</CardTitle>
+                <CardDescription className="mt-1 font-medium">
+                  𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 𝗮𝗻𝗱 𝗮𝘂𝘁𝗼𝗺𝗮𝘁𝗶𝗼𝗻 𝗲𝗻𝘁𝗵𝘂𝘀𝗶𝗮𝘀𝘁 | 𝗖𝗹𝗼𝘂𝗱 𝗮𝗻𝗱
+                  𝗗𝗲𝘃𝗼𝗽𝘀 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="mb-4">
+                  Creator and maintainer of Home of Best DevOps Resources.
+                  Passionate about DevOps, cloud technologies, and helping
+                  others learn.
+                </p>
+                <div className="flex justify-center space-x-3">
+                  <Button variant="outline" size="sm" asChild>
                     <a
-                      href="#"
+                      href="https://github.com/NotHarshhaa"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center"
@@ -416,40 +391,31 @@ export default function AboutPage() {
                       GitHub
                     </a>
                   </Button>
-                </CardFooter>
-              </Card>
-            </motion.div>
-          ))}
+                  <Button variant="outline" size="sm" asChild>
+                    <a
+                      href="https://linkedin.com/in/harshhaa-vardhan-reddy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        className="mr-1 h-4 w-4"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </motion.div>
-        <div className="mt-8 text-center">
-          <p className="mb-4 text-muted-foreground">
-            Want to see your name here? Contribute to our project!
-          </p>
-          <Button asChild>
-            <a
-              href="https://github.com/yourusername/home-of-best-devops-resources"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="mr-2"
-              >
-                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                <path d="M9 18c-4.51 2-5-2-7-2" />
-              </svg>
-              Become a Contributor
-            </a>
-          </Button>
-        </div>
       </div>
     </div>
   );
