@@ -28,12 +28,39 @@ const fontBody = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Home of Best DevOps Resources",
+  title: "Home of Best DevOps Resources | Your Ultimate DevOps Hub",
   description:
-    "A curated collection of the best DevOps resources, tools, and guides for modern software development.",
+    "A carefully curated collection of the best DevOps resources, tools, guides, and learning materials for every stage of your DevOps journey.",
   keywords:
-    "DevOps, CI/CD, containers, kubernetes, automation, cloud, infrastructure",
-  authors: [{ name: "DevOps Community" }],
+    "DevOps, CI/CD, containers, kubernetes, automation, cloud, infrastructure, Docker, AWS, Azure, GCP, monitoring, IaC, terraform",
+  authors: [{ name: "Harshhaa" }],
+  creator: "Harshhaa",
+  publisher: "DevOps Community",
+  openGraph: {
+    title: "Home of Best DevOps Resources",
+    description:
+      "Your Ultimate Collection of DevOps Learning Materials, Projects, and Tools",
+    url: "https://home-of-best-devops-resources.vercel.app",
+    siteName: "Home of Best DevOps Resources",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Home of Best DevOps Resources",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Home of Best DevOps Resources",
+    description:
+      "Your Ultimate Collection of DevOps Learning Materials, Projects, and Tools",
+    images: ["/og-image.png"],
+    creator: "@NotHarshhaa",
+  },
 };
 
 export const viewport = {

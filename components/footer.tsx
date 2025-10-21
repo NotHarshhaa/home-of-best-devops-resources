@@ -1,18 +1,40 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [emailValue, setEmailValue] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [scope, animate] = useAnimate();
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (emailValue) {
+      animate(
+        "button",
+        { scale: [0.9, 1.1, 1] },
+        { duration: 0.4 }
+      );
+      setIsSubscribed(true);
+      setTimeout(() => setIsSubscribed(false), 3000);
+      setEmailValue("");
+    }
+  };
 
   return (
     <footer className="border-t border-border/40 bg-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-t from-muted/30 to-background"></div>
       <div className="absolute inset-0 bg-[url('/footer-pattern.svg')] bg-repeat opacity-5"></div>
 
-      <div className="container py-8 sm:py-12 md:py-16 relative z-10">
+      {/* Animated shape at top of footer */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/5 via-primary/40 to-accent/5"></div>
+      <div className="absolute top-1 left-0 right-0 h-8 bg-gradient-to-b from-border/10 to-transparent"></div>
+
+      <div className="container py-10 sm:py-16 md:py-20 relative z-10">
         <div className="flex flex-col md:flex-row justify-between gap-6 sm:gap-10 md:gap-16 mb-6 sm:mb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -35,12 +57,12 @@ const Footer = () => {
               Your Ultimate Collection of DevOps Learning Materials, Projects,
               and Tools for accelerating your DevOps journey.
             </p>
-            <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6">
+            <div className="flex gap-4 sm:gap-5 mt-6 sm:mt-8">
               <Button
                 asChild
                 variant="outline"
                 size="icon"
-                className="rounded-full border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all"
+                className="rounded-full border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all hover:rotate-6 hover:scale-110"
               >
                 <a
                   href="https://github.com/NotHarshhaa/home-of-best-devops-resources"
@@ -70,7 +92,7 @@ const Footer = () => {
                 asChild
                 variant="outline"
                 size="icon"
-                className="rounded-full border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all"
+                className="rounded-full border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all hover:rotate-6 hover:scale-110"
               >
                 <a
                   href="https://twitter.com/NotHarshhaa"
@@ -99,7 +121,7 @@ const Footer = () => {
                 asChild
                 variant="outline"
                 size="icon"
-                className="rounded-full border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all"
+                className="rounded-full border-primary/20 hover:border-primary/60 hover:bg-primary/5 transition-all hover:rotate-6 hover:scale-110"
               >
                 <a
                   href="https://linkedin.com/in/NotHarshhaa"
@@ -129,17 +151,18 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 lg:gap-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h4 className="mb-3 sm:mb-4 text-xs sm:text-sm font-bold uppercase tracking-wider text-primary">
+              <h4 className="mb-3 sm:mb-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-primary relative inline-block">
                 Quick Links
+                <span className="absolute -bottom-1.5 left-0 w-10 h-0.5 bg-primary/30 rounded-full"></span>
               </h4>
-              <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm font-medium">
+              <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm font-medium">
                 <li>
                   <Link
                     href="/"
@@ -185,10 +208,11 @@ const Footer = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h4 className="mb-3 sm:mb-4 text-xs sm:text-sm font-bold uppercase tracking-wider text-accent">
+              <h4 className="mb-3 sm:mb-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-accent relative inline-block">
                 Categories
+                <span className="absolute -bottom-1.5 left-0 w-10 h-0.5 bg-accent/30 rounded-full"></span>
               </h4>
-              <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm font-medium">
+              <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm font-medium">
                 <li>
                   <Link
                     href="/categories/orchestration"
@@ -235,23 +259,43 @@ const Footer = () => {
               viewport={{ once: true }}
               className="col-span-2 md:col-span-1"
             >
-              <h4 className="mb-3 sm:mb-4 text-xs sm:text-sm font-bold uppercase tracking-wider text-primary">
+              <h4 className="mb-3 sm:mb-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-primary relative inline-block">
                 Subscribe
+                <span className="absolute -bottom-1.5 left-0 w-10 h-0.5 bg-primary/30 rounded-full"></span>
               </h4>
-              <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-5">
                 Stay updated with the latest DevOps resources and news.
               </p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex h-8 sm:h-10 w-full rounded-md border border-input bg-background px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                />
-                <Button size="sm" className="h-8 sm:h-10 text-xs sm:text-sm">
-                  Subscribe
-                </Button>
-              </div>
-            </motion.div>
+              <form onSubmit={handleSubscribe} ref={scope} className="relative">
+                <div className="flex gap-2 relative">
+                  <input
+                    type="email"
+                    value={emailValue}
+                    onChange={(e) => setEmailValue(e.target.value)}
+                    placeholder="Enter your email"
+                    className="flex h-10 sm:h-12 w-full rounded-lg border border-input bg-background px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-2 focus-visible:border-primary/50 transition-all"
+                    required
+                  />
+                  <Button
+                    type="submit"
+                    size="sm"
+                    className="h-10 sm:h-12 text-xs sm:text-sm rounded-lg px-4 hover:scale-105 transition-all shadow-sm hover:shadow"
+                  >
+                    Subscribe
+                  </Button>
+                </div>
+                 {isSubscribed && (
+                   <motion.div
+                     initial={{ opacity: 0, y: 10 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     exit={{ opacity: 0, y: 5 }}
+                     className="absolute left-0 -bottom-8 text-xs text-primary font-medium"
+                   >
+                     Thank you! You've been subscribed.
+                   </motion.div>
+                 )}
+               </form>
+             </motion.div>
           </div>
         </div>
 
@@ -260,22 +304,22 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: true }}
-          className="border-t border-border/30 pt-4 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground"
+          className="border-t border-border/30 pt-6 sm:pt-10 mt-8 sm:mt-12 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 text-xs sm:text-sm text-muted-foreground"
         >
           <p>
-            © {currentYear} NotHarshhaa | Home of Best DevOps Resources. All
+            © {currentYear} <span className="text-primary/90 hover:text-primary transition-colors">NotHarshhaa</span> | Home of Best DevOps Resources. All
             rights reserved.
           </p>
           <div className="flex gap-4 sm:gap-6">
             <Link
               href="/privacy"
-              className="hover:text-primary transition-colors"
+              className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="hover:text-primary transition-colors"
+              className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
             >
               Terms of Service
             </Link>
