@@ -166,7 +166,7 @@ export default function ResourcesPage() {
                     <CardTitle className="mt-3 sm:mt-5 text-lg sm:text-xl font-heading">
                       {resource.title}
                     </CardTitle>
-                    <CardDescription className="line-clamp-2 font-body text-muted-foreground mt-1 sm:mt-2 text-xs sm:text-sm">
+                    <CardDescription className="font-body text-muted-foreground mt-1 sm:mt-2 text-xs sm:text-sm">
                       {resource.description}
                     </CardDescription>
                   </CardHeader>

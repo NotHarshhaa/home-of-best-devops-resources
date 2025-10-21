@@ -19,7 +19,11 @@ export async function generateStaticParams() {
   return resourcesData.resources.map((resource) => ({ id: resource.id }));
 }
 
-export default async function ResourcePage({ params }: { params: Promise<{ id: string }> }) {
+export default async function ResourcePage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const resource = resourcesData.resources.find((r) => r.id === id);
 
@@ -123,7 +127,7 @@ export default async function ResourcePage({ params }: { params: Promise<{ id: s
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="pb-4 pt-0">
-                      <CardDescription className="line-clamp-2">
+                      <CardDescription>
                         {relatedResource.description}
                       </CardDescription>
                     </CardContent>

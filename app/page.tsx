@@ -148,7 +148,7 @@ export default function HomePage() {
                     <CardTitle className="mt-2 sm:mt-3 text-lg sm:text-xl font-heading">
                       {resource.title}
                     </CardTitle>
-                    <CardDescription className="line-clamp-2 font-body text-muted-foreground text-sm">
+                    <CardDescription className="font-body text-muted-foreground text-sm">
                       {resource.description}
                     </CardDescription>
                   </CardHeader>
