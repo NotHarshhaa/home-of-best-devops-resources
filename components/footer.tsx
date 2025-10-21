@@ -22,23 +22,11 @@ const Footer = () => {
             className="md:max-w-xs"
           >
             <div className="flex items-center gap-3 mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-8 w-8 text-primary"
-              >
-                <path d="M22 12.999V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.001" />
-                <path d="M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3" />
-                <path d="m8 4 4-2 4 2" />
-                <path d="M16 18h.01" />
-                <path d="M12 16v-4" />
-                <path d="M15 12h-6" />
-              </svg>
+              <img
+                src="/logo.svg"
+                alt="DevOps Resources Logo"
+                className="h-8 w-8"
+              />
               <h3 className="text-lg sm:text-xl font-heading font-bold gradient-text">
                 DevOps Resources
               </h3>

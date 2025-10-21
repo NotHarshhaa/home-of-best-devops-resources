@@ -48,23 +48,11 @@ const Navbar = () => {
             aria-label="Home of Best DevOps Resources"
           >
             <div className="relative overflow-hidden rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-8 w-8 sm:h-9 sm:w-9 text-primary transition-transform duration-300 group-hover:scale-110"
-              >
-                <path d="M22 12.999V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.001" />
-                <path d="M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3" />
-                <path d="m8 4 4-2 4 2" />
-                <path d="M16 18h.01" />
-                <path d="M12 16v-4" />
-                <path d="M15 12h-6" />
-              </svg>
+              <img
+                src="/logo.svg"
+                alt="DevOps Resources Logo"
+                className="h-8 w-8 sm:h-9 sm:w-9 transition-transform duration-300 group-hover:scale-110"
+              />
             </div>
             <div className="flex flex-col">
               <span className="hidden text-base sm:text-lg font-bold tracking-tight hover:text-primary/90 sm:inline-block transition-colors duration-200">
