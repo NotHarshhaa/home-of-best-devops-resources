@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -46,9 +49,75 @@ const getGithubLink = (id: string) => {
 };
 
 export default function ResourcesPage() {
-  const resources = resourcesData.resources;
-  const categories = resourcesData.categories;
+  const [resources, setResources] = useState(resourcesData.resources);
+  const [filteredResources, setFilteredResources] = useState(
+    resourcesData.resources,
+  );
+  const [searchTerm, setSearchTerm] = useState("");
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeTags, setActiveTags] = useState<string[]>([]);
+  const [sortOption, setSortOption] = useState("alphabetical");
+
+  const categories = ["all", ...resourcesData.categories];
   const tags = resourcesData.tags.slice(0, 12);
+
+  // Filter resources when search, category or tags change
+  useEffect(() => {
+    let result = resourcesData.resources;
+
+    // Filter by search term
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase();
+      result = result.filter(
+        (resource) =>
+          resource.title.toLowerCase().includes(term) ||
+          resource.description.toLowerCase().includes(term) ||
+          resource.tags.some((tag) => tag.toLowerCase().includes(term)),
+      );
+    }
+
+    // Filter by category
+    if (activeCategory && activeCategory !== "all") {
+      result = result.filter(
+        (resource) => resource.category === activeCategory,
+      );
+    }
+
+    // Filter by tags
+    if (activeTags.length > 0) {
+      result = result.filter((resource) =>
+        activeTags.some((tag) => resource.tags.includes(tag)),
+      );
+    }
+
+    // Sort resources
+    if (sortOption === "alphabetical") {
+      result = [...result].sort((a, b) => a.title.localeCompare(b.title));
+    } else if (sortOption === "featured") {
+      result = [...result].sort(
+        (a, b) => (b.featured === true ? 1 : 0) - (a.featured === true ? 1 : 0),
+      );
+    } else if (sortOption === "category") {
+      result = [...result].sort((a, b) => a.category.localeCompare(b.category));
+    }
+
+    setFilteredResources(result);
+  }, [searchTerm, activeCategory, activeTags, sortOption]);
+
+  // Toggle tag selection
+  const toggleTag = (tag: string) => {
+    setActiveTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag],
+    );
+  };
+
+  // Clear all filters
+  const clearFilters = () => {
+    setSearchTerm("");
+    setActiveCategory("all");
+    setActiveTags([]);
+    setSortOption("alphabetical");
+  };
 
   return (
     <div className="container py-8 sm:py-16">
@@ -85,18 +154,27 @@ export default function ResourcesPage() {
                   type="search"
                   placeholder="Search resources..."
                   className="w-full rounded-md border border-input bg-transparent px-10 py-2 sm:py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring shadow-sm"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
             </div>
 
             <div className="space-y-5">
               <h3 className="font-medium text-base sm:text-lg">Categories</h3>
-              <div className="space-y-1 bg-muted/50 rounded-lg p-2">
+              <div className="bg-muted/50 rounded-lg p-2 grid grid-cols-2 sm:grid-cols-3 gap-2 md:block md:space-y-1">
                 {categories.map((category) => (
                   <div key={category} className="flex items-center">
                     <Button
-                      variant="ghost"
-                      className="justify-start w-full text-muted-foreground hover:text-primary hover:bg-muted/80 rounded-md px-3 py-1.5 sm:px-4 sm:py-2 transition-colors text-sm"
+                      variant={
+                        activeCategory === category ? "default" : "ghost"
+                      }
+                      className={`w-full justify-start rounded-md px-3 py-1.5 sm:px-4 sm:py-2 transition-colors text-xs sm:text-sm ${
+                        activeCategory === category
+                          ? "bg-primary text-primary-foreground"
+                          : "text-muted-foreground hover:text-primary hover:bg-muted/80"
+                      }`}
+                      onClick={() => setActiveCategory(category)}
                     >
                       {category === "all" ? "All Categories" : category}
                     </Button>
@@ -111,8 +189,13 @@ export default function ResourcesPage() {
                 {tags.map((tag) => (
                   <Badge
                     key={tag}
-                    variant="outline"
-                    className="cursor-pointer bg-background px-2 py-0.5 sm:px-3 sm:py-1 hover:bg-primary/5 hover:border-primary/30 transition-colors text-xs sm:text-sm"
+                    variant={activeTags.includes(tag) ? "default" : "outline"}
+                    className={`cursor-pointer px-2 py-0.5 sm:px-3 sm:py-1 transition-colors text-xs sm:text-sm ${
+                      activeTags.includes(tag)
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-background hover:bg-primary/5 hover:border-primary/30"
+                    }`}
+                    onClick={() => toggleTag(tag)}
                   >
                     {tag}
                   </Badge>
@@ -123,6 +206,12 @@ export default function ResourcesPage() {
             <Button
               variant="outline"
               className="w-full bg-background hover:bg-primary/5 border-primary/20 hover:border-primary/50 transition-colors text-xs sm:text-sm py-1 sm:py-2"
+              onClick={clearFilters}
+              disabled={
+                !searchTerm &&
+                activeCategory === "all" &&
+                activeTags.length === 0
+              }
             >
               Clear All Filters
             </Button>
@@ -134,9 +223,9 @@ export default function ResourcesPage() {
             <p className="text-sm sm:text-md text-muted-foreground">
               Showing{" "}
               <span className="font-medium text-foreground">
-                {resources.length}
+                {filteredResources.length}
               </span>{" "}
-              resources
+              {filteredResources.length === 1 ? "resource" : "resources"}
             </p>
             <div className="flex items-center gap-3">
               <p className="text-xs sm:text-sm text-muted-foreground">
@@ -144,7 +233,8 @@ export default function ResourcesPage() {
               </p>
               <select
                 className="rounded-md border border-input bg-background px-3 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring shadow-sm"
-                defaultValue="alphabetical"
+                value={sortOption}
+                onChange={(e) => setSortOption(e.target.value)}
               >
                 <option value="alphabetical">A-Z</option>
                 <option value="featured">Featured</option>
@@ -154,7 +244,7 @@ export default function ResourcesPage() {
           </div>
 
           <div className="grid gap-4 sm:gap-8 sm:grid-cols-1 lg:grid-cols-2">
-            {resources.map((resource) => (
+            {filteredResources.map((resource) => (
               <div key={resource.id}>
                 <Card className="h-full overflow-hidden card-hover-effect border-border/60 bg-card shadow-sm">
                   <CardHeader className="pb-2 pt-4 px-4 sm:pb-4 sm:pt-6 sm:px-6">
@@ -239,6 +329,18 @@ export default function ResourcesPage() {
               </div>
             ))}
           </div>
+          {filteredResources.length === 0 && (
+            <div className="text-center py-12">
+              <h3 className="text-xl font-semibold mb-2">No resources found</h3>
+              <p className="text-muted-foreground mb-6">
+                Try adjusting your search or filters to find what you're looking
+                for.
+              </p>
+              <Button onClick={clearFilters} variant="default">
+                Clear All Filters
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </div>
