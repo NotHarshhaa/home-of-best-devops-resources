@@ -162,7 +162,7 @@ export default function ResourcesPage() {
 
             <div className="space-y-5">
               <h3 className="font-medium text-base sm:text-lg">Categories</h3>
-              <div className="bg-muted/50 rounded-lg p-2 grid grid-cols-2 sm:grid-cols-3 gap-2 md:block md:space-y-1">
+              <div className="bg-muted/50 rounded-lg p-2 grid grid-cols-2 sm:grid-cols-3 gap-2 md:block md:space-y-1 max-h-96 overflow-y-auto pr-2">
                 {categories.map((category) => (
                   <div key={category} className="flex items-center">
                     <Button
